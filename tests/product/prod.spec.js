@@ -17,7 +17,7 @@ test('product module', async ({ page }) => {
 
     await page.getByRole('img', { name: /Create Product/ }).click();
 
-    await page.locator('//input[@name="productname"]').fill('abc');
+    await page.locator('//input[@name="productname"]').fill('bag');
 
     // discontinued checkbox
     let prod = page.locator('//input[@value="T"]');

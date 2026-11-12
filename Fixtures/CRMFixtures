@@ -1,0 +1,37 @@
+
+import { test as base } from './Login.js';
+
+import { Lead_Class } from '../Pages/leadsclass.js';
+import { Org_Class } from '../Pages/OrgClass.js';
+import { Opp_Class } from '../Pages/Opportunities.js';
+import { Product_class } from '../Pages/Product.js';
+import { Quote_class } from '../Pages/Quotes.js';
+
+export let test = base.extend({
+
+    LeadFixture: async ({loginFixture}, use) => {
+        let leadobj = new Lead_Class(loginFixture);
+        use(leadobj);
+    },
+
+    OrgFixture: async ({loginFixture}, use) => {
+        let Orgobj = new Org_Class(loginFixture);
+        use(Orgobj);
+    },
+
+    OppFixture: async ({loginFixture}, use) => {
+        let Oppobj = new Opp_Class(loginFixture);
+        use(Oppobj);
+    },
+
+    ProdFixture: async ({loginFixture}, use) => {
+        let Prodobj = new Product_class(loginFixture);
+        use(Prodobj);
+    },
+
+    QuotesFixture: async ({loginFixture}, use) => {
+        let Quoteobj = new Quote_class(loginFixture);
+        use(Quoteobj);
+    }
+
+});

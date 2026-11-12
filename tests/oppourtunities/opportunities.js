@@ -35,5 +35,5 @@ test('Opportunities with POM', async ({ page }) => {
 
     // Validation
     await expect(page.locator('//span[@class="dvHeaderText"]'))
-        .toContainText('Amazon Project');
+        .toContainText('flipcart Project');
 });
